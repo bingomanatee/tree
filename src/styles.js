@@ -49,8 +49,10 @@ const Frame = styled('div')`
   fill: white;
 `
 
-const Title = styled('span')`
+const Title = styled('div')`
   vertical-align: middle;
+  padding-top: 2px;
+  padding-bottom: 2px;
 `
 
 const Content = styled(animated.div)`
@@ -69,4 +71,16 @@ const toggle = {
   verticalAlign: 'middle'
 }
 
-export { Global, Frame, Content, toggle, Title }
+
+const Center = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+`
+
+const CheckboxWrapper = styled.div`
+margin-right: ${({noIndent}) => noIndent ? 0 : '0.5rem'};
+height: 20px;
+`
+
+export { Global, Frame, Content, toggle, Title, Center, CheckboxWrapper }
