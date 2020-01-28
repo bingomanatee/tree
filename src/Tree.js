@@ -26,8 +26,8 @@ const Tree = memo(({ children, name, style, defaultOpen = false }) => {
         <CheckboxWrapper>{children ? <Checkbox checked={isOpen} onChange={(e) => {
           setOpen(e.target.value)
         }}/> : <Empty/>}</CheckboxWrapper>
-        <Remove onClick={() => setRemoved(true)}></Remove>
         <Title style={style}>{name}</Title>
+        <Remove onClick={() => setRemoved(true)}></Remove>
       </Center>
       <Content style={{ opacity, height: isOpen && previous === isOpen ? 'auto' : height }}>
         <a.div style={{ transform }} {...bind}>
@@ -44,7 +44,7 @@ const Tree = memo(({ children, name, style, defaultOpen = false }) => {
       <Center onClick={() => {
         setExtra([...extra, <Mutable/>])
       }}>
-        <CheckboxWrapper noIndent><Add/></CheckboxWrapper>
+        <CheckboxWrapper><Add/></CheckboxWrapper>
         <Title style={{ color: '#999999' }}>Add Item</Title>
       </Center>
     </Frame>
