@@ -22,6 +22,7 @@ const Tree = memo(({ children, name, style, defaultOpen = false }) => {
   if (removed) return '';
   return (
     <Frame>
+      <Title>{name}</Title>
       <Center>
         <CheckboxWrapper>{children ? <Checkbox checked={isOpen} onChange={(e) => {
           setOpen(e.target.value)
